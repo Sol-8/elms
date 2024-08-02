@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+    <BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elms.controller.MainLayoutController">
+        <top>
+            <MenuBar>
+                <menus>
+                    <Menu text="File">
+                        <items>
+                            <MenuItem text="Exit" onAction="#handleExit" />
+                        </items>
+                    </Menu>
+                    <Menu text="View">
+                        <items>
+                            <MenuItem text="Dashboard" onAction="#showDashboard" />
+                            <MenuItem text="User Management" onAction="#showUserManagement" />
+                            <MenuItem text="Book Cataloging" onAction="#showBookCataloging" />
+                            <MenuItem text="Circulation" onAction="#showCirculation" />
+                            <MenuItem text="Inventory Management" onAction="#showInventoryManagement" />
+                            <MenuItem text="Reports" onAction="#showReports" />
+                            <MenuItem text="Search Books" onAction="#showSearchBooks" />
+                            <MenuItem text="Borrowing History" onAction="#showBorrowingHistory" />
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+        </top>
+        <center>
+
+            <!-- This is where the loaded views will be placed -->
+        </center>
+    </BorderPane>
+
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elms.controller.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TabPane>
+            <tabs>
+                <Tab text="Books">
+                    <VBox>
+                        <!-- Add UI elements for managing books -->
+                        <TableView fx:id="booksTableView">
+                            <columns>
+                                <!-- Define columns for book attributes -->
+                            </columns>
+                        </TableView>
+                        <Button text="Add Book" onAction="#handleAddBook"/>
+                        <Button text="Edit Book" onAction="#handleEditBook"/>
+                        <Button text="Delete Book" onAction="#handleDeleteBook"/>
+                    </VBox>
+                </Tab>
+                <Tab text="Users">
+                    <VBox>
+                        <!-- Add UI elements for managing users -->
+                        <TableView fx:id="usersTableView">
+                            <columns>
+                                <!-- Define columns for user attributes -->
+                            </columns>
+                        </TableView>
+                        <Button text="Add User" onAction="#handleAddUser"/>
+                        <Button text="Edit User" onAction="#handleEditUser"/>
+                        <Button text="Delete User" onAction="#handleDeleteUser"/>
+                    </VBox>
+                </Tab>
+                <!-- Add more tabs as needed -->
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

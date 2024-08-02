@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.elms.controller.BookCatalogingController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox>
+        <TableView fx:id="bookTable">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title"/>
+                <TableColumn fx:id="authorColumn" text="Author"/>
+                <TableColumn fx:id="genreColumn" text="Genre"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="titleField" promptText="Title"/>
+        <TextField fx:id="authorField" promptText="Author"/>
+        <TextField fx:id="genreField" promptText="Genre"/>
+        <Button fx:id="addBookButton" text="Add Book" onAction="#handleAddBook"/>
+    </VBox>
+</AnchorPane>

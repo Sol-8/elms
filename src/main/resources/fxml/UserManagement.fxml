@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="com.example.elms.controller.UsersController">
+
+    <!-- Top section with buttons -->
+    <top>
+        <HBox spacing="10" padding="10" BorderPane.alignment="CENTER">
+            <Button fx:id="addButton" text="Add User" onAction="#handleAddUser"/>
+            <Button fx:id="editButton" text="Edit User" onAction="#handleEditUser"/>
+            <Button fx:id="deleteButton" text="Delete User" onAction="#handleDeleteUser"/>
+        </HBox>
+    </top>
+
+    <!-- Center section with TableView -->
+    <center>
+        <TableView fx:id="usersTableView" prefWidth="800" prefHeight="600">
+            <!-- Columns -->
+            <columns>
+                <TableColumn fx:id="usernameColumn" text="Username" prefWidth="200">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="username"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="200">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="registrationNumberColumn" text="Registration Number" prefWidth="200">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="registrationNumber"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <!-- Add more columns as needed -->
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

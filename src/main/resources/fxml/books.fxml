@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elms.controller.BooksController">
+
+    <!-- Top section with buttons -->
+    <top>
+        <HBox spacing="10" padding="10">
+            <Button fx:id="addButton" text="Add Book" onAction="#handleAddBook"/>
+            <Button fx:id="editButton" text="Edit Book" onAction="#handleEditBook"/>
+            <Button fx:id="deleteButton" text="Delete Book" onAction="#handleDeleteBook"/>
+        </HBox>
+    </top>
+
+    <!-- Center section with TableView -->
+    <center>
+        <VBox padding="10">
+            <TableView fx:id="booksTableView">
+                <!-- Define columns for the TableView -->
+                <columns>
+                    <TableColumn fx:id="titleColumn" text="Title" />
+                    <TableColumn fx:id="authorColumn" text="Author" />
+                    <TableColumn fx:id="genreColumn" text="Genre" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.elms.controller.ReportController">
+    <VBox spacing="10" padding="10">
+        <!-- Section for Overdue Books -->
+        <VBox spacing="5">
+            <Label text="Overdue Books" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TableView fx:id="overdueBooksTableView">
+                <columns>
+                    <TableColumn fx:id="titleColumn" text="Title" />
+                    <TableColumn fx:id="authorColumn" text="Author" />
+                    <TableColumn fx:id="dueDateColumn" text="Due Date" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Section for Borrowing Frequency -->
+        <VBox spacing="5" padding="0 0 10 0">
+            <Label text="Book Borrowing Frequency" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <ListView fx:id="borrowingFrequencyListView" />
+        </VBox>
+    </VBox>
+</AnchorPane>
